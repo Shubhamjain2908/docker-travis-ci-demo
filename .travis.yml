@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build  -t shubhamjain2908/docker-travis-ci-demo -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true shubhamjain2908/docker-travis-ci-demo npm run test
