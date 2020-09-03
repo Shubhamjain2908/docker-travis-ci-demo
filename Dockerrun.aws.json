@@ -18,6 +18,22 @@
             "image": "shubhamjain2908/multi-worker",
             "host": "api",
             "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "shubhamjain2908/multi-nginx",
+            "host": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": [
+                "client",
+                "server"
+            ]
         }
     ]
 }
