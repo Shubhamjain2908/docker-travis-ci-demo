@@ -1,0 +1,23 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "shubhamjain2908/multi-client",
+            "host": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "shubhamjain2908/multi-server",
+            "host": "server",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "shubhamjain2908/multi-worker",
+            "host": "api",
+            "essential": false
+        }
+    ]
+}
